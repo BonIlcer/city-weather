@@ -7,7 +7,7 @@ function CityList({ cities }) {
     return <h2>No cities!</h2>;
   }
   const list = cities.map((city) => (
-    <CityItem city={city.name} key={city.id} />
+    <CityItem city={city.name} key={city.id} id={city.id} />
   ));
   return (
     <div className="city-list">

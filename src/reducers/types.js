@@ -1,1 +1,2 @@
-export const CREATE_CITY = "CITY/CRETE_CITY";
+export const CREATE_CITY = "CITY/CREATE_CITY";
+export const DELETE_CITY = "CITY/DETELE_CITY";

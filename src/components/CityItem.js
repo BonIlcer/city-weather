@@ -1,9 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteCity } from "../actions/cityAction";
 
-function CityItem({ city }) {
+function CityItem({ city, id }) {
+  const dispatch = useDispatch();
   return (
     <div className="city-item">
-      <h4>{city}</h4>
+      <span>{id}:</span>
+      <h4 style={{ display: "inline", margin: "20px" }}>{city}</h4>
+      <button onClick={() => dispatch(deleteCity({ id: id }))}>✖</button>
     </div>
   );
 }
