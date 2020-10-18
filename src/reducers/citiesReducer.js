@@ -1,11 +1,7 @@
-import { act } from "react-dom/test-utils";
 import { CREATE_CITY, DELETE_CITY } from "./types";
 
 const initialState = {
-  cities: [
-    { name: "New York", id: 0 },
-    { name: "Moscow", id: 1 },
-  ],
+  cities: [],
 };
 
 export const citiesReducer = (state = initialState, action) => {

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { createCity } from "../actions/cityAction";
 
 function AddCityForm({ createCity }) {
-  const [value, setValue] = useState({ city: "ww" });
+  const [value, setValue] = useState({ city: "" });
   function submitHandler(e) {
     e.preventDefault();
 
