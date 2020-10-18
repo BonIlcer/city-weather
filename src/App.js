@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <h1>Redux</h1>
       <AddCityForm />
-      <CityList cities={[]} />
+      <CityList />
     </div>
   );
 }

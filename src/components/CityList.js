@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import CityItem from "./CityItem";
 
 function CityList({ cities }) {
@@ -14,4 +15,11 @@ function CityList({ cities }) {
   );
 }
 
-export default CityList;
+const mapStateToProps = (state) => {
+  //console.log(state);
+  return {
+    cities: state.rootCities.cities,
+  };
+};
+
+export default connect(mapStateToProps, null)(CityList);

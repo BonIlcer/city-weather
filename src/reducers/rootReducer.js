@@ -2,5 +2,5 @@ import { combineReducers } from "redux";
 import { citiesReducer } from "./citiesReducer";
 
 export const rootReducer = combineReducers({
-  cities: citiesReducer,
+  rootCities: citiesReducer,
 });
