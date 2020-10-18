@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { createCity } from "../actions/cityAction";
 
 function AddCityForm({ createCity }) {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState({ city: "ww" });
   function submitHandler(e) {
     e.preventDefault();
 
@@ -12,11 +12,17 @@ function AddCityForm({ createCity }) {
     } else {
       createCity({ name: e.target.city.value, id: Date.now() });
     }
-    e.target.city.value = "";
+    setValue({ city: "" });
   }
 
   function changeInputHandler(e) {
-    setValue(e.target.value);
+    const key = e.target.name;
+    const val = e.target.value;
+
+    setValue((prevState) => ({
+      ...prevState,
+      [key]: val,
+    }));
   }
   return (
     <form onSubmit={submitHandler}>
@@ -24,7 +30,7 @@ function AddCityForm({ createCity }) {
       <input
         type="text"
         name="city"
-        value={value}
+        value={value.city}
         onChange={changeInputHandler}
       />
       <button type="submit">Add city</button>
