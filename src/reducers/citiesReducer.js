@@ -7,7 +7,7 @@ const initialState = {
 export const citiesReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_CITY:
-      return { ...state, cities: state.posts.concat(action.payload) };
+      return { ...state, cities: state.cities.concat(action.payload) };
     default:
       return state;
   }
